@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Your Property — Standard Living</title>
+  <meta name="description" content="List your building with Standard Living — brokerage-free, verified tenants." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container-px header-inner">
+      <a href="index.html" class="brand">
+        <img data-header-logo src="images/logo-white-mark.png" alt="Standard Living" />
+        <span>STANDARD LIVING</span>
+      </a>
+
+      <form class="header-search" data-search-form>
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search locality or building" />
+      </form>
+
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="homes.html">Homes</a>
+        <a href="about.html">About</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
+        <a href="list-property.html" class="active">List Your Property</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="list-property.html" class="btn-primary btn-sm">List a Property</a>
+      </div>
+
+      <div class="header-mobile-controls">
+        <button data-search-toggle aria-label="Toggle search">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button data-menu-toggle aria-label="Toggle menu">
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <form class="mobile-search-panel" data-search-form>
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Search locality or building" />
+    </form>
+
+    <div class="mobile-menu-panel">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="homes.html" class="nav-link">Homes</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="list-property.html" class="nav-link active">List Your Property</a>
+      <a href="list-property.html" class="btn-primary btn-justify-center">List a Property</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Form ============ -->
+    <div data-list-property-form-wrap class="list-form-wrap container-px">
+      <div class="list-form-header reveal in-view">
+        <div class="list-form-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></div>
+        <p class="eyebrow" style="margin-top:1.5rem;">For Building Owners</p>
+        <h1>List your building with Standard Living</h1>
+        <p>Tell us about your property. Our team verifies every submission before it goes live, so give us as much detail as you can.</p>
+      </div>
+
+      <form class="list-form" data-list-property-form>
+        <!-- Owner details -->
+        <fieldset>
+          <legend>Owner details</legend>
+          <div class="field-row">
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">Full name</span>
+              <input type="text" name="ownerName" placeholder="Your full name" required />
+            </label>
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">Phone number</span>
+              <input type="tel" name="phone" placeholder="+91 98765 43210" required />
+            </label>
+          </div>
+          <label class="field">
+            <span class="eyebrow" style="color:var(--slate)">Email address</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+        </fieldset>
+
+        <!-- Building details -->
+        <fieldset>
+          <legend>Building details</legend>
+          <label class="field">
+            <span class="eyebrow" style="color:var(--slate)">Building / property name</span>
+            <input type="text" name="buildingName" placeholder="e.g. Aurum Residency" required />
+          </label>
+          <label class="field">
+            <span class="eyebrow" style="color:var(--slate)">Full address</span>
+            <input type="text" name="address" placeholder="Street, landmark" required />
+          </label>
+          <div class="field-row">
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">City</span>
+              <input type="text" name="city" placeholder="e.g. Bengaluru" required />
+            </label>
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">Locality</span>
+              <input type="text" name="locality" placeholder="e.g. Koramangala" required />
+            </label>
+          </div>
+
+          <div data-unit-types>
+            <label class="eyebrow" style="color:var(--slate);display:block;margin-bottom:0.75rem;">Unit types available</label>
+            <div class="chip-group">
+              <button type="button" class="chip">1 RK</button>
+              <button type="button" class="chip">1 BHK</button>
+              <button type="button" class="chip">2 BHK</button>
+              <button type="button" class="chip">3 BHK</button>
+              <button type="button" class="chip">4 BHK+</button>
+              <button type="button" class="chip">Villa / Independent House</button>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">Total units in building</span>
+              <input type="number" name="totalUnits" placeholder="e.g. 24" />
+            </label>
+            <label class="field">
+              <span class="eyebrow" style="color:var(--slate)">Expected rent (₹ / month)</span>
+              <input type="number" name="expectedRent" placeholder="e.g. 35000" />
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Amenities -->
+        <fieldset>
+          <legend>Amenities</legend>
+          <div data-amenities class="chip-group">
+            <button type="button" class="chip">24/7 Security</button>
+            <button type="button" class="chip">Power Backup</button>
+            <button type="button" class="chip">Covered Parking</button>
+            <button type="button" class="chip">Lift</button>
+            <button type="button" class="chip">Gym</button>
+            <button type="button" class="chip">Swimming Pool</button>
+            <button type="button" class="chip">Clubhouse</button>
+            <button type="button" class="chip">Children's Play Area</button>
+            <button type="button" class="chip">Water Supply</button>
+            <button type="button" class="chip">CCTV Surveillance</button>
+            <button type="button" class="chip">Gas Pipeline</button>
+            <button type="button" class="chip">Pet Friendly</button>
+          </div>
+        </fieldset>
+
+        <!-- Description -->
+        <fieldset>
+          <legend>Description</legend>
+          <textarea name="description" rows="5" placeholder="Anything prospective tenants should know — nearby transit, recent renovations, house rules, etc."></textarea>
+        </fieldset>
+
+        <!-- Media -->
+        <fieldset>
+          <legend>Photos &amp; video</legend>
+
+          <div class="uploader" data-uploader-photos>
+            <label class="eyebrow" style="color:var(--slate)">Upload property photos</label>
+            <div class="uploader-drop">
+              <svg class="icon" width="26" height="26" viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+              <p class="ud-main">Drag &amp; drop or <span>browse</span></p>
+              <p class="ud-sub">JPG or PNG, up to 10MB each</p>
+              <input type="file" accept="image/*" multiple class="hidden" />
+            </div>
+            <div class="uploader-previews"></div>
+          </div>
+
+          <div class="uploader" data-uploader-video>
+            <label class="eyebrow" style="color:var(--slate)">Upload a walkthrough video (optional)</label>
+            <div class="uploader-drop">
+              <svg class="icon" width="26" height="26" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2" ry="2"/></svg>
+              <p class="ud-main">Drag &amp; drop or <span>browse</span></p>
+              <p class="ud-sub">MP4 or MOV, up to 200MB</p>
+              <input type="file" accept="video/*" class="hidden" />
+            </div>
+            <div class="uploader-previews"></div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-primary" style="align-self:flex-start;">Submit for verification</button>
+      </form>
+    </div>
+
+    <!-- ============ Success state ============ -->
+    <section data-list-property-success class="form-success container-px hidden">
+      <div>
+        <div class="form-success-icon"><svg class="icon" width="30" height="30" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h1>Your building is on its way in.</h1>
+        <p>Our team will verify the details and reach out within 24–48 hours to schedule a visit and get your listing live.</p>
+        <button data-list-another class="btn-outline">List another property</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container-px footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo-white-mark.png" alt="" />
+          <div>
+            <span class="fb-name">STANDARD LIVING</span>
+            <p class="fb-tag">The Definition of Home</p>
+            <p class="fb-desc">Brokerage-free rentals, verified end to end.</p>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="homes.html">Homes</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="locations.html">Locations</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="list-property.html">List Your Property</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li class="footer-contact-item"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:standardlivinghomes@gmail.com">standardlivinghomes@gmail.com</a></li>
+              <li class="footer-contact-item"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+917090775757">+91 70907 75757</a></li>
+            </ul>
+            <div class="socials" style="margin-top:1rem;">
+              <a href="https://www.instagram.com/standardlivingbng/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61588676804218" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="https://www.youtube.com/channel/UCn_baIMlJKtQFD7EOmTkNHA" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-btn"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Standard Living. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/list-property.js"></script>
+</body>
+</html>
